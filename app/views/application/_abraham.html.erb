@@ -31,7 +31,11 @@
     <% end %>
     text: "<%= step['text'] %>",
     <% if step.key?('attachTo') %>
-    attachTo: {element: "<%= step['attachTo']['element'] %>", on: "<%= step['attachTo']['placement'] %>"},
+    attachTo: {element: "<%= step['attachTo']['element'] %>", on: "<%= step['attachTo']['placement'] %>"
+      <% if step['attachTo'].key?('highlightParentClass') %>
+      , highlightParentClass: "<%= step['attachTo']['highlightParentClass'] %>"
+      <% end %>
+    },
     showOn: function () {
       // Only display this step if its selector is present
       return document.querySelector("<%= step['attachTo']['element'] %>") ? true : false
