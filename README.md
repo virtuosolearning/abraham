@@ -14,6 +14,13 @@ Abraham injects dynamically-generated [Shepherd.js](http://github.hubspot.com/sh
 
 Abraham needs to know the current user to track tour views, e.g. `current_user` from Devise.
 
+## Note
+Changes from the original repo:
+* added nonce to script tag
+* remove rails-assets.org gems from gemspec
+* changes made by Brian: https://github.com/actmd/abraham/compare/master...dwyerb64:abraham:master
+
+
 ## Installation
 
 Add `abraham` and its JavaScript dependencies to your Gemfile:
